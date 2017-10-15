@@ -7,9 +7,11 @@ Packages like webpack and Babel were purposely left out to focus on creating the
 The goal is to write a simple Todo type application with a pre-selected set of packages. A seperate project will be used to create the backend.
 
 Recommended Steps:
-1. Clone this project and modify as desired (Add to your own github account)
-2. Design a prototype UI. See `poc` for a starting point
-3. Start implementing
+1. Fork this project and modify as desired (Add to your own github account)
+1. Run `npm install` to install the packages
+1. Run `npm start` to validate everything is installed and runs
+1. Design a prototype UI. See `poc` for a starting point
+1. Start implementing
 
 Considerations:
 * Handling CRUD Operations
