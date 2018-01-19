@@ -1,19 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TODO</title>
     <link rel="icon" href="todo.png">
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        th {
+            background: whitesmoke;
+        }
+    </style>
 </head>
+
 <body>
-    <link rel="stylesheet" href="/bulma/bulma.css">
+    <link rel="stylesheet" href="bulma/bulma.css" />
     <script src="/axios/axios.js"></script>
     <script src="/vue/vue.js"></script>
 
-    Your HTML Here
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#local">
+           </a>
+            <button class="button navbar-burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="button" href="#local">Search</a>
+                </div>
+                <div class="navbar-item">
+                    <a class="button is-primary" href="#local">New</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <table class="table is-bordered is-striped is-narrow is-fullwidth">
+        <thead>
+            <tr class="is-info">
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Category</th>
+                <th>Due</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>New</td>
+            <td>Low</td>
+            <td>Home</td>
+            <td></td>
+            <td>Clean Garage</td>
+        </tr>
+        <tr class="is-selected">
+            <td>New</td>
+            <td>Low</td>
+            <td>Home</td>
+            <td></td>
+            <td>Mow Yard</td>
+        </tr>
+        <tr>
+            <td>New</td>
+            <td>Low</td>
+            <td>Home</td>
+            <td></td>
+            <td>Blow Leaves</td>
+        </tr>
+    </table>
 
+    <div class="panel">
+        <form class="form" action="">
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">ID</label>
+                </div>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="id">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Priority</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>ption>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Status</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>New</option>
+                                    <option>In Progress</option>
+                                    <option>Done</option>
+                                    <option>Canceled</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Category</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Home</option>
+                                    <option>Work</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Title</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="title">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Description</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea" placeholder="description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-grouped is-grouped-right">
+                <p class="control">
+                    <button class="button is-light">Cancel</button>
+                </p>
+                <p class="control">
+                    <button class="button is-primary">Save</button>
+                </p>
+            </div>
+
+        </form>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
